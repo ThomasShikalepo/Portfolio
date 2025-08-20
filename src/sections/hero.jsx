@@ -2,10 +2,12 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import HeroText from "../components/HeroText";
 import ParallaxBackground from "../components/ParallaxBackground";
 import { Astronaut } from "../components/Astronaut";
-import { OrbitControls } from "@react-three/drei";
+import { Float } from "@react-three/drei";
 import { useMediaQuery } from "react-responsive";
 import { easing } from "maath";
-import { del } from "motion/react-client";
+import { Suspense } from "react";
+import Loader from "../components/Loader";
+
 
 const Hero = () => {
   const isMobile = useMediaQuery({ maxWidth: 853 });
@@ -18,10 +20,14 @@ const Hero = () => {
         style={{ width: "100vw", height: "100vh" }}
       >
         <Canvas camera={{ position: [0, 1, 3] }}>
-          <Astronaut
+          <Suspense fallback= {<Loader/>}>
+            <Float>
+            <Astronaut
             scale={isMobile && 0.23}
             position={isMobile && [0, -1.5, 0]}
           />
+          </Float>
+          </Suspense>
           <Rig/>
         </Canvas>
       </figure>
