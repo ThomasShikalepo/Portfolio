@@ -5,7 +5,8 @@ import { twMerge } from "tailwind-merge";
 
 export const FlipWords = ({
   words,
-  duration = 3000,
+  intervel = 3000,
+  animationDuration = 0.6,
   className
 }) => {
   const [currentWord, setCurrentWord] = useState(words[0]);
@@ -22,8 +23,8 @@ export const FlipWords = ({
     if (!isAnimating)
       setTimeout(() => {
         startAnimation();
-      }, duration);
-  }, [isAnimating, duration, startAnimation]);
+      }, intervel);
+  }, [isAnimating, intervel, startAnimation]);
 
   return (
     <AnimatePresence
@@ -43,6 +44,7 @@ export const FlipWords = ({
           type: "spring",
           stiffness: 100,
           damping: 10,
+          duration: animationDuration
         }}
         exit={{
           opacity: 0,
@@ -65,7 +67,7 @@ export const FlipWords = ({
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             transition={{
               delay: wordIndex * 0.3,
-              duration: 0.3,
+              duration: animationDuration,
             }}
             className="inline-block whitespace-nowrap">
             {word.split("").map((letter, letterIndex) => (
@@ -75,7 +77,7 @@ export const FlipWords = ({
                 animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                 transition={{
                   delay: wordIndex * 0.3 + letterIndex * 0.05,
-                  duration: 0.2,
+                  duration: animationDuration / 2,
                 }}
                 className="inline-block">
                 {letter}
