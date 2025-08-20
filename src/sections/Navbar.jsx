@@ -33,7 +33,7 @@ function Navigation() {
 }
 
 const navItems = [ 
-  { name: "Home", link: "#home", icon: "🏠" },
+  { name: "Home", link: "#Hero", icon: "🏠" },
   { name: "About", link: "#about", icon: "ℹ️" },
   { name: "Work", link: "#work", icon: "💼" },
   { name: "Contact", link: "#contact", icon: "✉️" },
