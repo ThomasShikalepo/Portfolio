@@ -1,6 +1,8 @@
 import { useRef } from "react";
 import Card from "../components/Card";
 import { Globe } from "../components/globe";
+import { World } from "../components/World";
+// import countries from "../components/data/globe.json";
 
 const About = () => {
   const grind2Container = useRef();
@@ -64,6 +66,7 @@ const About = () => {
               text="SRP"
               containerRef={grind2Container}
             />
+            {/* icons */}
             <Card
               style={{ rotate: "30deg", top: "70%", left: "70%" }}
               image="/public/assets/logos/csharp-pink.png"
@@ -92,7 +95,18 @@ const About = () => {
               I'm based in Namibia, and open to remote work worldwide
             </p>
           </div>
-          <figure className="absolute left-[30%] top-[10%]">
+          <figure className="absolute left-[30%] top-[10%] w-[400px] h-[400px]">
+            {/* <World
+              globeConfig={{
+                ambientLight: "#ffffff",
+                directionalLeftLight: "#ffcccc",
+                directionalTopLight: "#ccccff",
+                pointLight: "#ffffff",
+                globeColor: "#1d072e",
+              }}
+              data={[countries]}
+            /> */}
+
             <Globe />
           </figure>
         </div>

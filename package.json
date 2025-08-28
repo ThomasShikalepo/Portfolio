@@ -13,6 +13,7 @@
     "@react-three/drei": "^10.7.3",
     "@react-three/fiber": "^9.3.0",
     "@tailwindcss/vite": "^4.1.12",
+    "clsx": "^2.1.1",
     "cobe": "^0.6.4",
     "globe": "^0.2.0",
     "maath": "^0.10.8",
@@ -22,7 +23,8 @@
     "react-responsive": "^10.0.1",
     "tailwind-merge": "^3.3.1",
     "tailwindcss": "^4.1.12",
-    "three": "^0.179.1"
+    "three": "^0.179.1",
+    "three-globe": "^2.44.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.33.0",
