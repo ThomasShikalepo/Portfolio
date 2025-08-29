@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 // import { motion } from "motion/react";
 
 const HeroText = () => {
-  const words = ["Secure", "Modern", "Scalable"];
+  const words = ["Secure", "Modern", "Creative", "Scalable"];
   const names = ["Thomas", "Deon"];
 
   const variants = {
@@ -18,16 +18,19 @@ const HeroText = () => {
       {/* Desktop View */}
       <div className="flex-col hidden md:flex c-space">
         <motion.h1
-        className="text-4xl font-medium"
+          className="text-4xl font-medium"
           variants={variants}
           initial="hidden"
           animate="visible"
           transition={{ delay: 1 }}
         >
-          Hi, I'm <FlipWords words={names} 
-          className="text-3xl"
-          interval={4000}
-          duration={1.2}/>
+          Hi, I'm{" "}
+          <FlipWords
+            words={names}
+            className="text-3xl"
+            interval={4000}
+            duration={1.2}
+          />
         </motion.h1>
 
         <div className="flex flex-col items-start">
@@ -78,7 +81,7 @@ const HeroText = () => {
         </motion.h1>
 
         <div>
-          <motion.p 
+          <motion.p
             className="text-5xl font-black text-neutral-300"
             variants={variants}
             initial="hidden"

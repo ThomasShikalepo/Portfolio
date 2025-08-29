@@ -3,6 +3,7 @@ import Card from "../components/Card";
 import { Globe } from "../components/globe";
 import { World } from "../components/World";
 import CopyEmailButton from "../components/CopyEmailButton";
+import { Frameworks } from "../components/Frameworks";
 // import countries from "../components/data/globe.json";
 
 const About = () => {
@@ -104,7 +105,7 @@ const About = () => {
                 directionalTopLight: "#ccccff",
                 pointLight: "#ffffff",
                 globeColor: "#1d072e",
-              }}
+              }} 
               data={[countries]}
             /> */}
 
@@ -124,7 +125,16 @@ const About = () => {
 
         {/* grid 5 */}
         <div className="grid-default-color grid-5">
-          <div className="absolute inset-y-0 md:inset-y-9 w-full h-full start-[50%] md:scale-125"></div>
+          <div className="z-10 w-[50%]">
+            <p className="headText"> Tech Stack</p>
+            <p className="subtext">
+              I specialize in a variety of languages, frameworks, and tools that
+              allow me to build robust and scalable applications
+            </p>
+          </div>
+          <div className="absolute inset-y-0 md:inset-y-9 w-full h-full start-[50%] md:scale-125">
+            <Frameworks />
+          </div>
         </div>
       </div>
     </section>
