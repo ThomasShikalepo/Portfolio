@@ -6,13 +6,13 @@ function Navigation() {
   return (
     <ul className="nav-ul">
       <li className="nav-li">
-        <a href="#home" className="navlink">
+        <a href="#Home" className="navlink">
           home
         </a>
       </li>
 
       <li className="nav-li">
-        <a href="#about" className="navlink">
+        <a href="#About" className="navlink">
           About
         </a>
       </li>
@@ -32,12 +32,12 @@ function Navigation() {
   );
 }
 
-const navItems = [ 
+const navItems = [
   { name: "Home", link: "#Hero", icon: "🏠" },
   { name: "About", link: "#about", icon: "ℹ️" },
   { name: "Work", link: "#work", icon: "💼" },
   { name: "Contact", link: "#contact", icon: "✉️" },
-]
+];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -77,8 +77,8 @@ const Navbar = () => {
         </div>
       </div>
 
-       {/* FloatingNav appears on scroll */}
-       <FloatingNav navItems={navItems}/>
+      {/* FloatingNav appears on scroll */}
+      <FloatingNav navItems={navItems} />
 
       {isOpen && (
         <motion.div
